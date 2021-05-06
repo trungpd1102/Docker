@@ -1,0 +1,4 @@
+node_models
+
+# exclude debug log files
+npm-debug.log
