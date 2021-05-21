@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  mongodb:
+    image: "mongo:3.6.23"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: hachix
+      MONGO_INITDB_ROOT_PASSWORD: shinwa8x
+    ports: 
+      - 27017:27017
+    volumes: 
+      - "./data/database:/data/db"
