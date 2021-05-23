@@ -4,12 +4,14 @@ FROM node:14.16.1
 WORKDIR /app
 
 # Copy package.json and package-lock.json to current working directory
-COPY package*.json /app
+COPY ./src/package*.json /app/src/
+
+RUN echo 'Hello Docker'
 
 RUN npm install
 
 # Copy all code to the current working directory
-COPY . /app
+COPY . .
 
 # Use port in Docker
 EXPOSE 8080

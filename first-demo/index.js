@@ -1,7 +1,8 @@
 const express = require('express');
+require('dotenv').config()
 
 // Constants
-const PORT = 8888;
+const PORT = 8080;
 
 // App
 const app = express();
@@ -12,3 +13,6 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log("App running on port " + PORT);
 });
+
+console.log(process.env.DB_USERNAME, process.env.DB_PWD)
+console.log('Port sử  dụng là ' + process.env.PORT)
